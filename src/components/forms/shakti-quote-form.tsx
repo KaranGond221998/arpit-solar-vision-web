@@ -89,7 +89,7 @@ const ShaktiQuoteForm = ({
 
       // Optional secondary server
       try {
-        await fetch('http://localhost:3000/generate-quote', {
+        await fetch('https://solar-quote-server.onrender.com/generate-quote', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(insertData),
