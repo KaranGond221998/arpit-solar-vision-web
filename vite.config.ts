@@ -9,6 +9,17 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+
+
+  // ✅ ADDED: tells Vite to build into "dist" for Vercel
+  build: {
+    outDir: "dist"
+  },
+
+  // ✅ ADDED: ensures correct path resolution on Vercel
+  base: "/",
+
+
   plugins: [
     react(),
     mode === 'development' &&
